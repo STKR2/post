@@ -9,7 +9,7 @@ def language(func):
             language = await get_lang(message.chat.id)
             language = get_string(language)
         except:
-            language = get_string("en")
+            language = get_string("ar")
         return await func(_,message, language)
 
     return wrapper
@@ -21,7 +21,7 @@ def languageCB(func):
             language = await get_lang(CallbackQuery.message.chat.id)
             language = get_string(language)
         except:
-            language = get_string("en")
+            language = get_string("ar")
         return await func(_, CallbackQuery, language)
     return wrapper
 
@@ -32,7 +32,7 @@ def LanguageStart(func):
             language = await get_lang(message.chat.id)
             language = get_string(language)
         except:
-            language = get_string("en")
+            language = get_string("ar")
         return await func(_, message, language)
 
     return wrapper
