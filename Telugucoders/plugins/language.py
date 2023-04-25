@@ -17,7 +17,7 @@ grp_keyboard = InlineKeyboardMarkup(
       InlineKeyboardButton(text="أݪعࢪبية 🇮🇶.", callback_data="languages_ar")], 
      [InlineKeyboardButton(text="حِذِفَ 🦴.", callback_data="set_close")],
 
-@app.on_message(filters.command("lang"))
+@app.on_message(filters.command("ar"))
 @language
 async def langs_command(client, message: Message, _):
     userid = message.from_user.id if message.from_user else None
