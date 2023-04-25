@@ -8,20 +8,14 @@ from Telugucoders.helpers.lang import language
 
 
 keyboard = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="🇱🇷 English", callback_data="languages_en")],
-     [InlineKeyboardButton(text="🇮🇳 हिन्दी", callback_data="languages_hi"),
-      InlineKeyboardButton(text="🇮🇳 తెలుగు", callback_data="languages_te")], 
-     [InlineKeyboardButton(text="🇮🇳 Malayalam", callback_data="languages_ml"),
-      InlineKeyboardButton(text="🇷🇺 Russia", callback_data="languages_ru")], 
+    [[InlineKeyboardButton(text="أݪأڼجݪيࢪ࣪ية 🇱🇷.", callback_data="languages_en")],
+      InlineKeyboardButton(text="أݪعࢪبية 🇮🇶.", callback_data="languages_ar")], 
      [InlineKeyboardButton(text="✘ Back", callback_data="home_start")]])
 
 grp_keyboard = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="🇱🇷 English", callback_data="languages_en")],
-     [InlineKeyboardButton(text="🇮🇳 हिन्दी", callback_data="languages_hi"),
-      InlineKeyboardButton(text="🇮🇳 తెలుగు", callback_data="languages_te")], 
-     [InlineKeyboardButton(text="🇮🇳 Malayalam", callback_data="languages_ml"),
-      InlineKeyboardButton(text="🇷🇺 Russia", callback_data="languages_ru")], 
-     [InlineKeyboardButton(text="🗑 Bin", callback_data="set_close")]])
+    [[InlineKeyboardButton(text="أݪأڼجݪيࢪ࣪ية 🇱🇷.", callback_data="languages_en")],
+      InlineKeyboardButton(text="أݪعࢪبية 🇮🇶.", callback_data="languages_ar")], 
+     [InlineKeyboardButton(text="حِذِفَ 🦴.", callback_data="set_close")]])
 
 @app.on_message(filters.command("lang"))
 @language
@@ -40,7 +34,7 @@ async def langs_command(client, message: Message, _):
          return await app.send_message(LOG_GROUP_ID,text= e)
 
 
-@app.on_callback_query(filters.regex("languages"))
+@app.on_callback_query(filters.regex("اެݪݪغِة ."))
 async def language_markup(_, CallbackQuery):
     langauge = (CallbackQuery.data).split("_")[1]
     old = await get_lang(CallbackQuery.message.chat.id)
