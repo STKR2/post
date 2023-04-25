@@ -14,7 +14,7 @@ keyboard = InlineKeyboardMarkup(
 grp_keyboard = InlineKeyboardMarkup(
     [[InlineKeyboardButton(text="🇱🇷 English", callback_data="languages_en")],
       InlineKeyboardButton(text="🇷🇺 العربية", callback_data="languages_ru")], 
-     [InlineKeyboardButton(text="🗑 Bin", callback_data="set_close")]])
+
 
 @app.on_message(filters.command("lang"))
 @language
