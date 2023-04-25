@@ -5,6 +5,7 @@ start1 : "**👋🏻Hello {}\n\nIam an Advance Music bot with special features.\
 help_btn : "👨‍💼 Help & Commands 👨‍💼"
 support_btn : "👥 Support"
 owner_btn : "🇮🇳 Owner"
+lang_btn : "لا تغير اللغة ."
 alive_start : "Hello {}\n\nIam Alive 😅 How can i help you\nMyVersion: 3.0 Running on vps server."
 close_btn : "Close 🗑"
 repo_btn : "Hey This is the source of me 🙂"
@@ -17,6 +18,7 @@ back_home : "✘ Back"
 ghelp_text : "Hello Contact Me in Pm for help!" 
 ghelp_btn : "🔗 Click here to help"
 uptime_btn : "**💞 Telugu Coders Music Bot Uptime:\n➠ Uptime: {}\n➠ User: {}\n➠ Started Time: {}\n➠ Powered By: @tgshadow_fighters**"
+
 
 #plugins - admins.py
 reload_btn : "**✅Admin list updated\n✅Bot list updated\n╰ Music Bot Reloaded By: {}**"
