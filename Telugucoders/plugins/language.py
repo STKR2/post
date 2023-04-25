@@ -34,7 +34,7 @@ async def langs_command(client, message: Message, _):
          return await app.send_message(LOG_GROUP_ID,text= e)
 
 
-@app.on_callback_query(filters.regex("اެݪݪغِة ."))
+@app.on_callback_query(filters.regex("languages"))
 async def language_markup(_, CallbackQuery):
     langauge = (CallbackQuery.data).split("_")[1]
     old = await get_lang(CallbackQuery.message.chat.id)
