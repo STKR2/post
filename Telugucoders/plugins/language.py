@@ -10,14 +10,15 @@ from Telugucoders.helpers.lang import language
 keyboard = InlineKeyboardMarkup(
     [[InlineKeyboardButton(text="أݪأڼجݪيࢪ࣪ية 🇱🇷.", callback_data="languages_en")],
       InlineKeyboardButton(text="أݪعࢪبية 🇮🇶.", callback_data="languages_ar")], 
-     [InlineKeyboardButton(text="ࢪجۅٛع .", callback_data="home_start")],
+     [InlineKeyboardButton(text="ࢪجۅٛع .", callback_data="home_start")]])
 
 grp_keyboard = InlineKeyboardMarkup(
     [[InlineKeyboardButton(text="أݪأڼجݪيࢪ࣪ية 🇱🇷.", callback_data="languages_en")],
       InlineKeyboardButton(text="أݪعࢪبية 🇮🇶.", callback_data="languages_ar")], 
-     [InlineKeyboardButton(text="حِذِفَ 🦴.", callback_data="set_close")],
+     [InlineKeyboardButton(text="حِذِفَ 🦴.", callback_data="set_close")]])
 
-@app.on_message(filters.command("ar"))
+
+@app.on_message(filters.command("lang"))
 @language
 async def langs_command(client, message: Message, _):
     userid = message.from_user.id if message.from_user else None
