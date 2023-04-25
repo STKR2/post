@@ -10,7 +10,6 @@ from Telugucoders.helpers.lang import language
 keyboard = InlineKeyboardMarkup(
     [[InlineKeyboardButton(text="🇱🇷 English", callback_data="languages_en")],
       InlineKeyboardButton(text="🇷🇺 العربية", callback_data="languages_ru")], 
-     [InlineKeyboardButton(text="✘ Back", callback_data="home_start")]])
 
 grp_keyboard = InlineKeyboardMarkup(
     [[InlineKeyboardButton(text="🇱🇷 English", callback_data="languages_en")],
